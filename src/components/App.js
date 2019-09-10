@@ -55,6 +55,7 @@ export default class App extends Component {
       showModal: ps.items.find(item => item.id === id),
       isOpenModal: true,
     }));
+    document.querySelector('body').style.overflow = 'hidden';
   };
 
   handleCloseModal = e => {
@@ -62,6 +63,7 @@ export default class App extends Component {
     this.setState({
       isOpenModal: false,
     });
+    document.querySelector('body').style.overflow = 'auto';
   };
 
   handlePressKey = ({ code }) => {
@@ -69,6 +71,7 @@ export default class App extends Component {
     this.setState({
       isOpenModal: false,
     });
+    document.querySelector('body').style.overflow = 'auto';
   };
 
   fetching = async () => {
