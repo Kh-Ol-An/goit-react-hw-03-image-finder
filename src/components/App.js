@@ -5,8 +5,6 @@ import SearchForm from './SearchForm/SearchForm';
 import Gallery from './Gallery/Gallery';
 import Modal from './Modal/Modal';
 
-// ключ из .env???????
-
 const INITIAL_STATE = {
   items: [],
   search: '',
@@ -93,7 +91,10 @@ export default class App extends Component {
   };
 
   reset = () => {
-    this.setState({ ...INITIAL_STATE });
+    this.setState({
+      items: [],
+      page: 1,
+    });
   };
 
   render() {
